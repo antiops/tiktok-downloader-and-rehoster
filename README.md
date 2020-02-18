@@ -11,8 +11,8 @@ This repo contains the source for TikTok.fail, A simple webapp that allows users
 ## Setup
 
 1. Install Node >= v12.14.0
-2. Clone this repo `git clone https://github.com/antiops/tiktok-downloader-and rehoster`
-3. Install dependencies with `5npm install` or `yarn install`
+2. Clone this repo `git clone https://github.com/antiops/tiktok-downloader-and-rehoster`
+3. Install dependencies with `npm install` or `yarn install`
 4. Add `WEBHOOKURL='addyourwebhooklinkhere'` to .env, create the file if needed
 5. Run it,
    * In development use `npm run dev` to disable caching and enable verbose errors
