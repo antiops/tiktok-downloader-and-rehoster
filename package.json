@@ -1,0 +1,60 @@
+{
+  "name": "tiktok-downloader-and-rehoster",
+  "description": "A TikTok Downloader, Replaying, and Sharing Platform",
+  "version": "0.1.3",
+  "author": "antiops",
+  "homepage": "https://tiktok.fail",
+  "license": "AGPL-3.0-only",
+  "main": "start.js",
+  "scripts": {
+    "start": "node ./start.js",
+    "dev": "nodemon ./start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/antiops/tiktok-downloader-and-rehoster.git"
+  },
+  "keywords": [
+    "tiktok",
+    "musically", 
+    "downloader"
+  ],
+  "engines": {
+    "node": ">=12.14.0",
+    "yarn": "^1.21.2"
+  },
+  "nodemonConfig": {
+    "env": {
+      "NODE_ENV": "development"
+    },
+    "ignore": [
+      "public",
+      "routes/videos",
+      "node_modules",
+      "logs"
+    ],
+    "ext": "js,hbs",
+    "verbose": true
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "debug": "^4.1.1",
+    "discord-webhook-node": "^1.0.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.1.0",
+    "helmet": "^3.21.2",
+    "moment": "^2.24.0",
+    "morgan": "^1.9.1",
+    "request": "^2.88.0",
+    "rotating-file-stream": "^2.0.2",
+    "sanitizer": "^0.1.3",
+    "sqreen": "^1.38.3",
+    "xss-clean": "^0.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2",
+    "standard": "^14.3.1"
+  }
+}

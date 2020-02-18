@@ -1,0 +1,74 @@
+<section id="home" class="hero is-fullheight">
+{{!-- {{DISPLAY LINK ERROR}} --}}
+{{#if error}}
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <h1>Something Went Wrong</h1>
+      <pre>Error: {{error}}</pre>
+    </div>
+  </div>
+{{else}}
+  {{#if query.v}}
+    <article class="message"></article>
+      <div class="container has-text-centered is-centered">
+      {{!-- {{VIDEO PLAYER}} --}}
+        <video width="320" height="240" controls preload="auto">
+          <source src="/download/{{query.v}}.mp4" type="video/mp4" title="TikTok Video">
+          Your browser does not support video
+        </video>
+        {{!-- {{BUTTONS}} --}}
+        <div>
+          <div class="buttons has-addons is-centered is-marginless is-hidden-touch">
+            <p class="control">
+              <a class="button is-primary is-outlined is-fullwidth" href="/download/{{query.v}}.mp4" title="Download this video" alt="Download this video" download>
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>Download Video</span>
+              </a>
+            </p>
+            <p class="control">
+              <a class="button is-danger is-outlined" href="/contact?subject=%5B{{query.v}}%5D%20Report%20Hosted%20Video" title="Report this video" alt="Report this video" target="_blank">
+                <span class="icon">
+                  <i class="fas fa-flag"></i>
+                </span>
+              </a>
+            </p>
+          </div>
+        </div>
+        {{!-- {{END BUTTONS}} --}}
+        {{!-- {{SHARE}} --}}
+        <span class="subtitle">Share this video:</span>
+            <ul class="send-buttons">
+              <a class="button is-twitter is-outlined is-rounded" href="https://tinyurl.com/twitsubmit?url=https://tiktok.fail/stream?v={{query.v}}" title="Tweet this video" alt="Tweet this video" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-twitter"></i>
+                </span>
+              </a>
+
+              <a class="button is-reddit is-rounded is-outlined" href="https://tinyurl.com/redsubmit?url=https://tiktok.fail/stream?v={{query.v}}&title=" title="Share this video on Reddit" alt="Share this video on Reddit" target="_blank">
+                <span class="icon">
+                  <i class="fab fa-reddit-alien"></i>
+                </span>
+              </a>
+
+              <a class="button is-email is-rounded is-outlined" href="mailto:?subject=Check%20out%20this%20TikTok%20video&body=https%3A%2F%2Ftiktok.fail%2Fstream%3Fv%3D{{query.v}}" title="Email this video to a friend" alt="Email this video to a friend" target="_blank">
+                <span class="icon">
+                  <i class="far fa-envelope"></i>
+                </span>
+              </a>
+            </ul>
+            <p><a href="https://tiktok.fail/stream?v={{query.v}}">This</a> video will always be available on our site,<br>
+            even if the original gets removed on TikTok.com!</p><br>
+      </div>
+{{!-- {{DISPLAY GENERIC ERROR}} --}}
+  {{else}}
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h1>Something Went Wrong</h1>
+          <pre>Error: No Video Selected</pre>
+        </div>
+      </div>
+  {{/if}}
+{{/if}}
+</section>

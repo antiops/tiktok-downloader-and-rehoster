@@ -1,0 +1,229 @@
+@import url("https://cdn.tiktok.fail/tiktok.fail/font.css");
+
+body {
+  font-family: 'Sofia Pro', sans-serif;
+  background-color: #000;
+  color: #fff
+}
+
+code {
+  background-color: #000;
+  border-style: solid;
+  border-radius: 4px;
+  border-width: 1px;
+  border-color: #111
+}
+
+strong {
+  color: #aaa
+}
+
+a {
+  color: #00d1b2
+}
+
+.hero-body {
+  padding-bottom: 0px
+}
+
+.url-info {
+  margin-bottom: 5px
+}
+
+.title {
+  color: #fff;
+  font-size: 35px
+}
+
+.title:not(:last-child) {
+  margin-bottom: 0px
+}
+
+.maintitle {
+  font-size: 70px
+}
+
+.subtitle {
+  color: #aaa
+}
+
+.description {
+  font-weight: normal
+}
+
+.input {
+  max-width: 100%;
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border-color: #8F2AA3
+}
+
+.is-primary.input:active,
+.is-primary.input:active,
+.is-primary.input:focus,
+.is-primary.is-active.input,
+.is-primary.is-active.textarea,
+.is-primary.is-focused.input,
+.is-primary.is-focused.textarea,
+.is-primary.textarea:active,
+.is-primary.textarea:focus {
+  box-shadow: 0 0 0 .125em rgba(245, 56, 73, 0.26)
+}
+
+.tiktok-mark {
+  position: relative;
+  width: 92px;
+  height: 104px;
+  margin: 0 10px;
+}
+
+.tiktok-mark::before,
+.tiktok-mark::after {
+  position: absolute;
+  content: "";
+  width: 87px;
+  height: 100px;
+  mix-blend-mode: screen;
+}
+
+.tiktok-mark::before {
+  top: 0;
+  left: 0;
+  background:
+    radial-gradient(circle at right top, transparent 40%, #00f2ea 40%, #00f2ea 70%, transparent 70%) right top / 41px 41px no-repeat,
+    radial-gradient(circle at left bottom, transparent 42%, #00f2ea 42%, #00f2ea 98%, transparent 98%) 32px 36px / 4px 32px no-repeat,
+    radial-gradient(circle at left top, transparent 30%, #00f2ea 30%, #00f2ea 70%, transparent 70%) 32px bottom / 32px 32px no-repeat,
+    radial-gradient(circle at right top, transparent 30%, #00f2ea 30%, #00f2ea 70%, transparent 70%) 0 bottom / 32px 32px no-repeat,
+    radial-gradient(circle at right bottom, transparent 30%, #00f2ea 30%, #00f2ea 70%, transparent 70%) 0 36px / 32px 32px no-repeat,
+    linear-gradient(#00f2ea, #00f2ea) 46px 0 / 18px 70px no-repeat;
+}
+
+.tiktok-mark::after {
+  top: 4px;
+  left: 5px;
+  background:
+    radial-gradient(circle at right top, transparent 40%, #ff004f 40%, #ff004f 70%, transparent 70%) right top / 41px 41px no-repeat,
+    radial-gradient(circle at left bottom, transparent 42%, #ff004f 42%, #ff004f 98%, transparent 98%) 32px 36px / 4px 32px no-repeat,
+    radial-gradient(circle at left top, transparent 30%, #ff004f 30%, #ff004f 70%, transparent 70%) 32px bottom / 32px 32px no-repeat,
+    radial-gradient(circle at right top, transparent 30%, #ff004f 30%, #ff004f 70%, transparent 70%) 0 bottom / 32px 32px no-repeat,
+    radial-gradient(circle at right bottom, transparent 30%, #ff004f 30%, #ff004f 70%, transparent 70%) 0 36px / 32px 32px no-repeat,
+    linear-gradient(#ff004f, #ff004f) 46px 0 / 18px 70px no-repeat;
+}
+
+.footer {
+  background-color: #040404
+}
+
+.navbar {
+  background-color: #090909
+}
+
+.navbar-link.is-active,
+.navbar-link:focus,
+.navbar-link:focus-within,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:focus,
+a.navbar-item:focus-within,
+a.navbar-item:hover {
+  color: #ff3860
+}
+
+ul.send-buttons {
+  list-style: none;
+  padding: 0
+}
+
+ul.send-buttons li {
+  display: inline
+}
+
+ul.send-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden
+}
+
+.alert {
+  padding: 20px;
+  background-color: #f44336;
+  color: white
+}
+
+.alert.success {
+  background-color: #4CAF50
+}
+
+.alert.info {
+  background-color: #2196F3
+}
+
+.alert.warning {
+  background-color: #ff9800
+}
+
+.closebtn {
+  margin-left: 15px;
+  color: white;
+  font-weight: bold;
+  float: right;
+  font-size: 22px;
+  line-height: 20px;
+  cursor: pointer;
+  transition: 0.3s
+}
+
+.closebtn:hover {
+  color: black
+}
+
+.button.is-twitter.is-outlined {
+  background-color: transparent;
+  border-color: #1da1f2;
+  color: #1da1f2
+}
+
+.button.is-twitter.is-outlined.is-focused,
+.button.is-twitter.is-outlined.is-hovered,
+.button.is-twitter.is-outlined:focus,
+.button.is-twitter.is-outlined:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+  color: #fff
+}
+
+.button.is-reddit.is-outlined {
+  background-color: transparent;
+  border-color: #ff4500;
+  color: #ff4500
+}
+
+.button.is-reddit.is-outlined.is-focused,
+.button.is-reddit.is-outlined.is-hovered,
+.button.is-reddit.is-outlined:focus,
+.button.is-reddit.is-outlined:hover {
+  background-color: #ff4500;
+  border-color: #ff4500;
+  color: #fff
+}
+
+.button.is-email.is-outlined {
+  background-color: transparent;
+  border-color: #fff;
+  color: #fff
+}
+
+.button.is-email.is-outlined.is-focused,
+.button.is-email.is-outlined.is-hovered,
+.button.is-email.is-outlined:focus,
+.button.is-email.is-outlined:hover {
+  background-color: #fff;
+  border-color: #fff;
+  color: #000
+}

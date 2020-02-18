@@ -1,0 +1,67 @@
+<section id="home" class="hero is-fullheight">
+
+  {{#if query.contact}}
+    <div class="alert info">
+      <span class="closebtn">&times;</span>  
+      <strong>Success!</strong> Thanks for contacting us, we'll get to your message as soon as possible :)
+    </div>
+  {{/if}}
+  {{#if query.error}}
+    <div class="alert">
+      <span class="closebtn">&times;</span>  
+      <strong>Error!</strong> There was an error with your request :(
+    </div>
+  {{/if}}
+
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <center>
+        <div class="tiktok-mark"></div>
+      </center><br>
+      <h1 class="title"><span class="maintitle">TikTok</span>.fail</h1><br><h1 class="title">A TikTok Downloader, Replaying, and Sharing Platform</h1>
+      <br><br>
+      <p class="description">Download and share any <b>public</b> TikTok video in .mp4 format with one single click :)</p>
+    </div>
+  </div>
+  <div class="container has-text-centered">
+    <form class="down-form" name="download" method="post" action='/video'>
+      <p class="url-info">URL must be in this format: <code>https://(vm|www).tiktok.com/*</code></p>
+      <div class="field">
+        <p class="control is-expanded">
+          <input type="input" name="url" class="input is-primary is-fullwidth" placeholder="https://www.tiktok.com/@amouranth/video/6781586484592954630" required />
+        </p>
+      </div>
+      <button class="button is-info is-fullwidth">Download</button>
+    </form>
+
+  </div>
+</section>
+
+{{#if query.contact}}
+  <script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+      }
+    }
+  </script>
+{{/if}}
+{{#if query.error}}
+  <script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+    
+    for (i = 0; i < close.length; i++) {
+      close[i].onclick = function(){
+        var div = this.parentElement;
+        div.style.opacity = "0";
+        setTimeout(function(){ div.style.display = "none"; }, 600);
+      }
+    }
+  </script>
+{{/if}}

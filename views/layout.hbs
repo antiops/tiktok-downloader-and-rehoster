@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="index, follow">
+  <meta name="description" content="TikTok.fail is a free TikTok downloader & sharing service. All videos are hosted on our blazing fast servers, it will be viewable here forever even if it s deleted." />
+  <meta name="keywords" content="downloader" />
+
+  {{#if query.v}}
+    <title>Video Hosted @ TikTok.fail - A TikTok Downloader, Replaying, and Sharing Platform</title>
+  {{else}}
+    <title>TikTok.fail - A TikTok Downloader, Replaying, and Sharing Platform</title>
+  {{/if}}
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://cdn.tiktok.fail/tiktok.fail/style.css" />
+  <script defer src="https://cdn.tiktok.fail/tiktok.fail/fontawesome-v5.3.1-all.js"></script>
+
+  {{!-- {{opengraph}} --}}
+  <meta property="og:title" content="Download and share any public TikTok video @ TikTok.fail" />
+  <meta property="og:description" content="TikTok.fail is a free TikTok downloader & sharing service. All videos are hosted on our blazing fast servers, it will be viewable here forever even if was deleted." />
+  <meta property="og:site_name" content="TikTok.fail - A TikTok Downloader, Replaying, and Sharing Platform" />
+  {{#if query.v}}
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://tiktok.fail/stream?v={{query.v}}" />
+    <meta property="og:image" content="https://tiktok.fail/thumbs/{{query.v}}.png" />
+    <meta property="og:video" content="https://tiktok.fail/download/{{query.v}}.mp4" />
+    <meta property="og:video:type" content="video/mp4" />
+  {{else}}
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tiktok.fail" />
+    <meta property="og:image" content="https://cdn.tiktok.fail/tiktok.fail/icon.png" />
+  {{/if}}
+  <meta property="og:locale" content="en-US" />
+
+  {{!-- {{twitter}} --}}
+  <meta name="twitter:title" content="Download and share any public TikTok video @ TikTok.fail" />
+  <meta name="twitter:description" content="TikTok.fail is a free TikTok downloader & sharing service. All videos are hosted on our blazing fast servers, it will be viewable here forever even if wit was deleted." />
+  {{#if query.v}}
+    <meta name="twitter:card" content="player" />
+    <meta name="twitter:image" content="https://tiktok.fail/thumbs/{{query.v}}.png" />
+    <meta name="twitter:image:src" content="https://tiktok.fail/thumbs/{{query.v}}.png" />
+    <meta name="twitter:player" content="https://tiktok.fail/download/{{query.v}}.mp4" />
+    <meta name="twitter:player:stream" content="https://tiktok.fail/download/{{query.v}}.mp4" />
+    <meta name="twitter:player:stream:content_type" content="video/mp4" />
+    <meta name="twitter:url" content="https://tiktok.fail/stream?v={{query.v}}" />
+  {{else}}
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:image" content="https://cdn.tiktok.fail/tiktok.fail/icon.png" />
+    <meta name="twitter:url" content="https://tiktok.fail/" />
+  {{/if}}
+  <meta name="twitter:domain" content="tiktok.fail" />
+
+  {{!-- {{misc}} --}}
+  <meta name="theme-color" content="#ff3860" />
+  <meta name="application-name" content="TikTok Downloader" />
+  <meta name="apple-mobile-web-app-title" content="TikTok Downloader" />
+  <meta name="msapplication-config" content="https://cdn.tiktok.fail/tiktok.fail/browserconfig.xml" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://cdn.tiktok.fail/tiktok.fail/favicon.ico"/>
+  <link rel="manifest" href="https://cdn.tiktok.fail/tiktok.fail/manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="https://cdn.tiktok.fail/tiktok.fail/icon.png" />
+  <link rel="icon" href="https://cdn.tiktok.fail/tiktok.fail/icons/32px.png" sizes="32x32" />
+  <link rel="icon" href="https://cdn.tiktok.fail/tiktok.fail/icons/96px.png" sizes="96x96" />
+</head>
+
+
+<body>
+{{!-- {{TOP BAR}} --}}
+  <nav class="navbar is-transparent">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="/">
+        <h1 class="subtitle">TikTok.fail</h1>
+      </a>
+      <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+
+    <div id="navbarExampleTransparentExample" class="navbar-menu">
+      <div class="navbar-start">
+        <a class="navbar-item" href="/">
+          Home
+        </a>
+        <a class="navbar-item" href="/?ref=dl-btn">
+          Download a TikTok Video
+        </a>
+        <a class="navbar-item" href="/contact">
+          Contact/Report
+        </a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">
+            Info
+          </a>
+          <div class="navbar-dropdown is-boxed">
+            <a class="navbar-item" href="#">
+              placeholder
+            </a>
+            <hr class="navbar-divider">
+            <a class="navbar-item" href="https://tiktok.fail/blog/pages/how-to-delete-your-tiktok-account.html" target="_blank">
+              How to Delete TikTok Account
+            </a>
+            <a class="navbar-item" href="https://tiktok.fail/blog/pages/how-to-change-your-username-in-tiktok-2020.html" target="_blank">
+              How to Change Your Username in TikTok
+            </a>
+            <a class="navbar-item" href="https://tiktok.fail/blog/pages/how-to-download-tiktok-musically-videos-quickly.html" target="_blank">
+              How to Download TikTok (Musical.ly) Videos
+            </a>
+            <a class="navbar-item" href="https://tiktok.fail/blog/pages/what-is-tiktok-2020.html" target="_blank">
+              What Is TikTok?
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+{{!-- {{END TOP BAR}} --}}
+
+{{#if query.v}}
+{{!-- {{BOTTOM BAR [MOBILE]}} --}}
+  <nav class="navbar is-fixed-bottom is-hidden-desktop">
+      <div class="navbar-end">
+        <div class="navbar-item">
+
+          <div class="buttons is-centered">
+
+            <p class="control">
+              <a class="button is-danger is-outlined" href="/contact?subject=%5B{{query.v}}%5D%20Report%20Hosted%20Video" title="Report this video" alt="Report this video" target="_blank">
+                <span class="icon">
+                  <i class="fas fa-flag"></i>
+                </span>
+
+                <span>Report Video</span>
+              </a>
+            </p>
+
+            <p class="control">
+              <a class="button is-primary is-outlined is-fullwidth" href="/download/{{query.v}}.mp4" title="Download this video" alt="Download this video" download>
+                <span class="icon">
+                  <i class="fas fa-download"></i>
+                </span>
+                <span>Download Video</span>
+              </a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+  </nav>
+{{!-- {{END BOTTOM BAR}} --}}
+{{/if}}
+
+{{{body}}}
+
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>TikTok.fail</strong> A TikTok video downloader and sharing platform
+    </p>
+    <p>
+      <a href="/">HOME</a> | <a href="https://tiktok.fail/info/terms-of-service.html">TOS</a> | <a href="/contact">CONTACT</a>
+    </p>
+  </div>
+</footer>
+
+<section class="section is-fullheight">
+  <h2 class="title">
+    <span>How to download TikTok videos?</span>
+  </h2>
+  <article class="message">
+    <div class="message-body has-text-left">
+      The best and easiest way to download TikTok videos is to insert the link on our website <a href="/">HERE</a>
+      <li>Open the TikTok video that you want to share or download</li>
+      <li>Click the <code>Share</code> button on the bottom right </li>
+      <li>Click the <code>Copy Link</code> button</li>
+      <li>Insert the link on the main page of our website and press "Download"</li>
+      <li>Wait for our server to grab the video and you will be redirected to your videos page to either share out link with others or download your video</li>
+    </div>
+  </article>
+
+  <h2 class="title">
+    <span>How do I save/download my favorite TikTok videos to my iPhone?</span>
+  </h2>
+  <article class="message">
+    <div class="message-body has-text-left">
+      How do I save/download my favorite Tik Tok videos to my iPhone? Because Apple security policy, you can't normally download any videos, music, or movies to your iPhone just like you can do it with Android phones. But there is some methods to deal with it, please follow this introduction to download TikTok videos with your iPhone <a href="https://tiktok.fail/info/how-to-download-tiktok-videos-iphone.html">HERE</a>
+    </div>
+  </article>
+
+  <h2 class="title">
+    <span>Does TikTok.fail store downloaded videos?</span>
+  </h2>
+  <article class="message">
+    <div class="message-body has-text-left">
+      Yes! This website was made for the purpose of archival. To ensure the videos you want don't magically disappear from the internet, we keep a copy hosted on our high speed servers so even if your video gets removed on TikTok you will be able to come back here and view it, share it, and download it.
+    </div>
+  </article>
+
+  <h2 class="title">
+    <span>Do I have to pay to download TikTok Videos? </span>
+  </h2>
+  <article class="message">
+    <div class="message-body has-text-left">
+      No! This website was created and is provided for free out of love for the TikTok community and of course a great Reddit community that this was originally made for. If you want to help support the site you can turn off your adblocker for our site :)
+    </div>
+  </article>
+
+</section>
+
+
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+  const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
+
+  if ($navbarBurgers.length > 0) {
+
+    $navbarBurgers.forEach(el => {
+      el.addEventListener('click', () => {
+
+        const target = el.dataset.target;
+        const $target = document.getElementById(target);
+
+        el.classList.toggle('is-active');
+        $target.classList.toggle('is-active');
+
+      });
+    });
+  }
+
+});
+</script>
+</body>
+</html>

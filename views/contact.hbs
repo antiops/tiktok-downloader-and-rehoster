@@ -1,0 +1,119 @@
+<section class="section is-fullheight">
+  <center>
+    <div class="tiktok-mark"></div>
+  </center>
+  <br>
+    <div class="container has-text-centered">
+
+      <h2 class="title has-text-left is-hidden-touch">
+        <span>Contact Form:</span>
+      </h2>
+      <h2 class="title has-text-centered is-hidden-desktop">
+        <span>Contact Form:</span>
+      </h2>
+
+      <!--FORM START-->
+      <form name="contact" method="post" action='/contact-relay'>
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Name &amp; Email</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input is-info" type="text" name="name" placeholder="Name" required>
+            </p>
+          </div>
+          <div class="field">
+            <p class="control is-expanded">
+              <input class="input is-primary" type="email" name="email" placeholder="Email" required>
+            </p>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Contact Reason</label>
+        </div>
+        <div class="field-body">
+          <div class="field is-narrow">
+            <div class="control">
+              <div class="select is-fullwidth is-hovered">
+                <select name="reason">
+                  <option selected>Select an option</option>
+                  <option value="abuse">Report Abuse</option>
+                  <option value="questions">Questions</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Subject</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              {{#if query.subject}}
+                <input class="input is-success" type="text" name="subject" id="subject" placeholder="e.g. Report offensive video" value="{{query.subject}}" readonly>
+              {{else}}
+                <input class="input is-success" type="text" name="subject" id="subject" placeholder="e.g. Report offensive video" required>
+              {{/if}}
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field is-horizontal">
+        <div class="field-label is-normal">
+          <label class="label">Message Body</label>
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <textarea class="textarea" name="body" maxlength="1500" id="contactBody" placeholder="Explain how we can help you" required></textarea>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="field is-horizontal">
+        <div class="field-label">
+          <!-- Left empty for spacing -->
+        </div>
+        <div class="field-body">
+          <div class="field">
+            <div class="control">
+              <button class="button is-primary is-fullwidth">
+                Send message
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </form>
+      <!--FORM END-->
+      <br><br>
+    <h2 class="title has-text-left is-hidden-touch">
+      <span>Types of Abuse:</span>
+    </h2>
+    <h2 class="title has-text-centered is-hidden-desktop">
+      <span>Types of Abuse:</span>
+    </h2>
+    <br>
+  <article class="message">
+    <div class="message-body has-text-left">
+      <u>We do not allow any type of content on our site from the below list:</u>
+        <li>Suggestive or sexual content featuring minors (Under 18 years of age)</li>
+        <li>Any display of physical abuse</li>
+        <li>Hate speech</li>
+        <li>Terrorism or threats</li>
+        <li>Anything that we may find offensive</li>
+    </div>
+  </article>
+</section>
