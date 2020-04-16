@@ -1,3 +1,4 @@
+## 🔴 This is the very first version of the site when it was first released, the current state of TikTok.fail does not reflect in here
 # TikTok.fail - A TikTok Downloader, Replaying, and Sharing Platform
 
 ## Description
